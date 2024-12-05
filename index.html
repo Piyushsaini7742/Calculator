@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -8,39 +9,41 @@
 <body>
     <table align="center">
         <tr>
-            <td colspan="4"><input id="output" value="0" type="text" readonly /> </td>
+            <td colspan="4"><input id="output" value="0" type="text" readonly /></td>
         </tr>
         <tr>
-            <td><input type="button" value="C" /></td>
-            <td><input type="button" value="%" /></td>
-            <td><input type="button" value="&lArr;" /></td>
-            <td><input type="button" value="/" /></td>
+            <td><input type="button" value="C" onclick="clearOutput()" /></td>
+            <td><input type="button" value="%" onclick="appendToOutput('%')" /></td>
+            <td><input type="button" value="&lArr;" onclick="backspace()" /></td>
+            <td><input type="button" value="/" onclick="appendToOutput('/')" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="7" /></td>
-            <td><input type="button" value="8" /></td>
-            <td><input type="button" value="9" /></td>
-            <td><input type="button" value="*" /></td>
+            <td><input type="button" value="7" onclick="appendToOutput('7')" /></td>
+            <td><input type="button" value="8" onclick="appendToOutput('8')" /></td>
+            <td><input type="button" value="9" onclick="appendToOutput('9')" /></td>
+            <td><input type="button" value="*" onclick="appendToOutput('*')" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="4" /></td>
-            <td><input type="button" value="5" /></td>
-            <td><input type="button" value="6" /></td>
-            <td><input type="button" value="-" /></td>
+            <td><input type="button" value="4" onclick="appendToOutput('4')" /></td>
+            <td><input type="button" value="5" onclick="appendToOutput('5')" /></td>
+            <td><input type="button" value="6" onclick="appendToOutput('6')" /></td>
+            <td><input type="button" value="-" onclick="appendToOutput('-')" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="1" /></td>
-            <td><input type="button" value="2" /></td>
-            <td><input type="button" value="3" /></td>
-            <td><input type="button" value="+" /></td>
+            <td><input type="button" value="1" onclick="appendToOutput('1')" /></td>
+            <td><input type="button" value="2" onclick="appendToOutput('2')" /></td>
+            <td><input type="button" value="3" onclick="appendToOutput('3')" /></td>
+            <td><input type="button" value="+" onclick="appendToOutput('+')" /></td>
         </tr>
         <tr>
-            <td><input type="button" value="00" /></td>
-            <td><input type="button" value="0" /></td>
-            <td><input type="button" value="." /></td>
-            <td><input type="button" value="=" /></td>
+            <td><input type="button" value="00" onclick="appendToOutput('00')" /></td>
+            <td><input type="button" value="0" onclick="appendToOutput('0')" /></td>
+            <td><input type="button" value="." onclick="appendToOutput('.')" /></td>
+            <td><input type="button" value="=" onclick="calculate()" /></td>
         </tr>
     </table>
+
+    <script src="./script.js"></script>
 </body>
 
 </html>

@@ -4,7 +4,7 @@ input[type="text"] {
     font-size: 30px;
     color: black;
     background: white;
-
+    box-sizing: border-box;
 }
 
 input[type="button"] {
